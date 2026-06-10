@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <meta name="description" content="마포 기반 주식투자 전문, 백링크 자동화 프로그램의 상세 정보와 데이터 기반 지역 시그널을 제공합니다. 마포만의 투자 인사이트를 확인하세요.">
+    <meta name="keywords" content="백링크 자동화, 주식투자, 마포, 데이터 분석, 정보, 지역 시그널, 투자 인사이트">
+    <meta property="og:title" content="정보 | 마포 주식투자 백링크 자동화 프로그램">
+    <meta property="og:description" content="마포 기반 백링크 자동화 프로그램의 상세 정보와 지역 시그널. 데이터로 증명된 투자 전략.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-417.ve/info">
+    <title>정보 | 마포 주식투자 백링크 자동화 프로그램</title>
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Typography - Brutalist oversized */
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #f5e642;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            text-shadow: 4px 4px 0 #000;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            color: #f5e642;
+            border-left: 8px solid #f5e642;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+        a {
+            color: #f5e642;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #f5e642;
+        }
+
+        /* Layout - asymmetric blocks, full bleed */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        header, nav, main, section, footer {
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: #111;
+            padding: 1.5rem 0;
+            border-bottom: 4px solid #f5e642;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #f5e642;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+        }
+        .logo a {
+            color: #f5e642;
+            border: none;
+        }
+        .logo a:hover {
+            border: none;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f5e642;
+            transition: width 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a.active {
+            color: #f5e642;
+        }
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #f5e642;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Tel link */
+        .tel-link {
+            background: #f5e642;
+            color: #111 !important;
+            padding: 0.6rem 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 3px solid #f5e642;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .tel-link:hover {
+            background: transparent;
+            color: #f5e642 !important;
+            border-color: #f5e642;
+        }
+
+        /* Main content */
+        main {
+            padding: 4rem 0;
+        }
+
+        /* Hero section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            padding: 2rem 0;
+            border-bottom: 2px solid #333;
+        }
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            background: #222;
+            padding: 2rem;
+            border: 3px solid #f5e642;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #f5e642;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #aaa;
+            letter-spacing: 0.1em;
+        }
+
+        /* Info grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .info-card {
+            background: #222;
+            padding: 2rem;
+            border: 2px solid #333;
+            transition: border-color 0.3s;
+        }
+        .info-card:hover {
+            border-color: #f5e642;
+        }
+        .info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .info-card h3::before {
+            content: '▸';
+            color: #f5e642;
+        }
+        .info-card p {
+            font-size: 0.95rem;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #333;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+        .info-card ul li::before {
+            content: '→ ';
+            color: #f5e642;
+        }
+
+        /* Signal section */
+        .signal-section {
+            background: #1a1a1a;
+            padding: 3rem 0;
+            border-top: 4px solid #f5e642;
+            border-bottom: 4px solid #f5e642;
+            margin-bottom: 4rem;
+        }
+        .signal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .signal-item {
+            background: #222;
+            padding: 2rem;
+            border-left: 6px solid #f5e642;
+        }
+        .signal-item h3 {
+            color: #f5e642;
+            font-size: 1.4rem;
+        }
+        .signal-item .signal-value {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 1rem 0;
+        }
+        .signal-item .signal-desc {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        .faq-item {
+            background: #222;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+        }
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #f5e642;
+            text-transform: uppercase;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .faq-question.active::after {
+            content: '−';
+        }
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            display: none;
+            color: #ccc;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 3rem 0;
+            border-top: 4px solid #f5e642;
+            text-align: center;
+        }
+        footer p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: #f5e642;
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .signal-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #111;
+                padding: 1.5rem;
+                border-bottom: 4px solid #f5e642;
+                gap: 1rem;
+            }
+            nav.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .header-inner {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="/">백링크 자동화</a>
+            </div>
+            <button class="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/service">서비스</a>
+                <a href="/info" class="active">정보</a>
+                <a href="/contact" class="tel-link">연락처</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>정보 &amp; 지역 시그널</h1>
+                    <p>마포 기반 백링크 자동화 프로그램의 핵심 데이터와 지역 기반 투자 시그널을 제공합니다. 정량적 분석과 자동화된 데이터 수집을 통해 정보 우위를 확보하세요. 전문가의 체계적인 접근법으로 시장의 노이즈를 제거하고 실제 투자에 필요한 인사이트만을 추출합니다.</p>
+                    <a href="/contact" class="tel-link">전문가 상담</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">247</span>
+                        <span class="stat-label">데이터 포인트</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">지역 시그널</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">정확도</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3.2초</span>
+                        <span class="stat-label">업데이트 주기</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Grid -->
+            <section>
+                <h2>핵심 정보</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>데이터 수집 체계</h3>
+                        <ul>
+                            <li>실시간 백링크 스캐닝 (초당 500개 링크)</li>
+                            <li>마포 지역 23개 주요 채널 모니터링</li>
+                            <li>AI 기반 이상 징후 탐지 시스템</li>
+                            <li>히스토리컬 데이터 5년 아카이빙</li>
+                            <li>크로스 레퍼런스 검증 프로토콜</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>투자 시그널 분류</h3>
+                        <ul>
+                            <li>강력 매수 시그널 (S+ 등급)</li>
+                            <li>매수 시그널 (S 등급)</li>
+                            <li>관심 시그널 (A 등급)</li>
+                            <li>모니터링 시그널 (B 등급)</li>
+                            <li>리스크 경고 시그널 (R 등급)</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>마포 지역 특화</h3>
+                        <ul>
+                            <li>마포구 상권 데이터 연동</li>
+                            <li>지역별 유동인구 패턴 분석</li>
+                            <li>홍대·합정·상수 상권 시그널</li>
+                            <li>지역 언론 모니터링 24/7</li>
+                            <li>마포 기반 투자자 네트워크</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>자동화 성능 지표</h3>
+                        <ul>
+                            <li>평균 응답 시간 0.3초</li>
+                            <li>99.7% 가동률 (SLA)</li>
+                            <li>초당 1,200건 데이터 처리</li>
+                            <li>실시간 알림 지연 2초 이내</li>
+                            <li>멀티 소스 중복 검증</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Signal Section -->
+            <section class="signal-section">
+                <div class="container">
+                    <h2>실시간 지역 시그널</h2>
+                    <div class="signal-grid">
+                        <div class="signal-item">
+                            <h3>마포 A 구역</h3>
+                            <div class="signal-value">강력 매수</div>
+                            <div class="signal-desc">백링크 집중도 +34% / 지역 트래픽 급등 / 3개월 내 긍정 신호 7회</div
+</body>
+</html>
